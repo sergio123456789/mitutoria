@@ -1,10 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Asesor_controller extends CI_Controller {
+class Asesor_Controller extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->view('Asesor/index.php','datos',false);
 		
 	}
 
