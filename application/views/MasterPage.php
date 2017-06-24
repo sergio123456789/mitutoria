@@ -28,6 +28,7 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <?php $user = $this->session->userdata('logged_in');?>
 </head>
 <body>
 <div class="wrapper">
@@ -44,10 +45,200 @@
                     <img src="https://www.blumenreviews.com/images/universities/logo/logo-inacap.png" style="width: 200px; height: 50px;">
                 </a>
             </div>
-
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active">
+                <?php if ((in_array(1, $user['permisos'])) ) { ?>
+                        <li>
+                        <a href="#">
+                            <i class="material-icons">home</i>
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">face</i>
+                            <p>Ver Alumnos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buscarprofesores.html">
+                        <i class="fa fa-user-secret"></i>
+                            <p>Ver Profesores</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">library_books</i>
+                            <p>Tutorías</p>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#">
+                            <i class="material-icons">assignment_turned_in</i>
+                            <p>Reforzamientos</p>
+                        </a>
+                    </li>
+                   <li>
+                        <a href="#">
+                            <i class="material-icons">book</i>
+                            <p>Ayudantía</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons text-gray">notifications</i>
+                            <p>Notificaciones</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">file_upload</i>
+                            <p>Importar</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">file_download</i>
+                            <p>Exportar</p>
+                        </a>
+                    </li>
+                    <?php } ?>
+                    <?php if ((in_array(2, $user['permisos'])) ) { ?>
+                        <li>
+                        <a href="#">
+                            <i class="material-icons">home</i>
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">face</i>
+                            <p>Ver Alumnos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buscarprofesores.html">
+                        <i class="fa fa-user-secret"></i>
+                            <p>Ver Profesores</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">library_books</i>
+                            <p>Tutorías</p>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#">
+                            <i class="material-icons">assignment_turned_in</i>
+                            <p>Reforzamientos</p>
+                        </a>
+                    </li>
+                   <li>
+                        <a href="#">
+                            <i class="material-icons">book</i>
+                            <p>Ayudantía</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons text-gray">notifications</i>
+                            <p>Notificaciones</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">file_upload</i>
+                            <p>Importar</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">file_download</i>
+                            <p>Exportar</p>
+                        </a>
+                    </li>
+                    <?php } ?>
+                    <?php if ((in_array(3, $user['permisos'])) ) { ?>
+                         <li class="active">
+                        <a href="#">
+                            <i class="material-icons">home</i>
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <i class="material-icons">person</i>
+                            <p>Mi Perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="table.html">
+                            <i class="material-icons">date_range</i>                            
+                        <p>Mi Horario</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="typography.html">
+                            <i class="material-icons">library_books</i>
+                            <p>Mis Ramos</p>
+                        </a>
+                    </li>
+                   <li>
+                   <a href="#Modalreforzamientos" id="openBtn" data-toggle="modal">
+                        
+                            <i class="material-icons">assignment</i>
+                            <p>Solicitar reforzamientos</p></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons text-gray">notifications</i>
+                            <p>Notificaciones</p>
+
+                        </a>
+                    </li>
+                    <?php } ?>
+                    <?php if ((in_array(4, $user['permisos'])) ) { ?>
+                         <li class="active">
+                        <a href="#">
+                            <i class="material-icons">home</i>
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <i class="material-icons">person</i>
+                            <p>Mi Perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="table.html">
+                            <i class="material-icons">date_range</i>                            
+                        <p>Mi Horario</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="typography.html">
+                            <i class="material-icons">library_books</i>
+                            <p>Mis Ramos</p>
+                        </a>
+                    </li>
+                   <li>
+                   <a href="#Modalreforzamientos" id="openBtn" data-toggle="modal">
+                        
+                            <i class="material-icons">assignment</i>
+                            <p>Solicitar reforzamientos</p></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons text-gray">notifications</i>
+                            <p>Notificaciones</p>
+
+                        </a>
+                    </li>
+                    <?php } ?>
+                    <?php if ((in_array(5, $user['permisos'])) ) { ?>
+                        <li>
                         <a href="#">
                             <i class="material-icons">home</i>
                             <p>Inicio</p>
@@ -66,18 +257,19 @@
                         </a>
                     </li>
                       <li>
-                        <a href="#.html">
+                        <a href="historial.html">
                             <i class="material-icons">library_books</i>
                             <p>Historial de Tutorías</p>
                         </a>
                     </li>
                    
                     <li>
-                        <a href="notifications.html">
+                        <a href="#">
                             <i class="material-icons text-gray">notifications</i>
                             <p>Notificaciones</p>
                         </a>
                     </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
