@@ -273,40 +273,33 @@
                 </ul>
             </div>
         </div>
-        <!--aqui termina la wea -->
-
-         <div class="main-panel">
             <nav class="navbar navbar-transparent navbar-absolute">
                 <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        
-                    </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            
-                            
-                            <li class="dropdown" style="height: 150px; width:150px;">
+                            <li class="dropdown">
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                   <i class="medium material-icons"  >person</i>
+                                   <i class="material-icons"> medium power_settings_new</i>
                                    <p class="hidden-lg hidden-md">Perfil</p>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Salir</a></li>
-                                    
+                                    <li><a href="<?=site_url('Login_Controller/logout')?>">Salir</a></li>
                                 </ul>
                             </li>
                         </ul>
-
-                      
                     </div>
                 </div>
             </nav>
+           
+
+        <!--aqui termina la wea -->
+        <div class="row">
+  <div class="col-xs-12">
+  <?php echo $content_for_layout; ?>
+  </div>
+</div>
+
+                    </div>
             </body>
           
             </html>
