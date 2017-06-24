@@ -15,7 +15,15 @@ class Asesor_Controller extends CI_Controller {
 	}
 
 	public function verAlumnos(){
-		$this->layout->view('/Asesor/VerAlumno.php','datos',false);
+		$this->layout->view('/Asesor/VerAlumno.php');
+	}
+
+	public function verDetallesAlumno(){
+		
+	}
+
+	public function verProfesor(){
+		$this->layout->view('/Asesor/VerProfesores.php');
 	}
 
 }

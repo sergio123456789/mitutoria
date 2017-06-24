@@ -5,7 +5,7 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="<?= base_url()?>resources/assets/img/apple-icon.png" />
 	<link rel="icon" type="image/png" href="<?= base_url()?>resources/assets/img/favicon.png" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<script src="<?= base_url()?>resources/assets/js/jquery-3.1.0.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="<?= base_url()?>resources/assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="<?= base_url()?>resources/assets/js/material.min.js" type="text/javascript"></script>
 
@@ -49,7 +49,7 @@
                 <ul class="nav">
                 <?php if ((in_array(1, $user['permisos'])) ) { ?>
                         <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/index">
                             <i class="material-icons">home</i>
                             <p>Inicio</p>
                         </a>

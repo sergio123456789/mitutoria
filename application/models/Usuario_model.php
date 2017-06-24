@@ -98,6 +98,7 @@ function insertperusu(){
 		}
 		return $result;
 	}
+
 	function findByIdpermisos($id){
 		$result=array();
 		$bit = null;
@@ -124,13 +125,23 @@ function insertperusu(){
 		}
 		return $result;
 	}
+
+	function findByRut($rut,$dv){
+		$result=array();
+		$this->db->where('usu_rut',$rut);
+		$consulta = $this->db->get('usuario');
+		foreach ($consulta->result() as $row) {
+			$result[] = $this->create($row);
+		}
+		return $result;
+	}
+	
 	public function cambiarcontra($id,$usu_pass){
         $data  =  array(
 			'usu_pass' => $usu_pass
 			);
         $this->db->where('usu_id', $id);
         return $this->db->update('usuario', $data);
-    
 }
 
 	public function getPermisos()

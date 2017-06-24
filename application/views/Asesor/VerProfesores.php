@@ -7,8 +7,8 @@
 							 <div class="col-md-12">
 	                        <div class="card">
 	                            <div class="card-header" data-background-color="purple">
-	                                <h4 class="title">Buscar Alumno</h4>
-	                                <p class="category">Acá puedes buscar alumnos por su rut</p>
+	                                <h4 class="title">Buscar Profesor</h4>
+	                                <p class="category">Acá puedes buscar profesores por su rut</p>
 	                            </div>
 	                            <div class="card-content table-responsive" style="float: center;">
 	                                    <div class="row">
@@ -76,7 +76,7 @@
 						<div class="col-md-6">
     						<div class="card card-profile">
     							<div class="content">
-    								<h6 class="category text-gray">Alumno</h6>
+    								<h6 class="category text-gray">Profesor</h6>
     								<h4 id="nombre" class="card-title"></h4>
     								<p class="card-content">
     									 <div class="card-content table-responsive">
