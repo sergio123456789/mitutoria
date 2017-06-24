@@ -26,7 +26,11 @@ class Horario_model extends CI_Model {
 
 	public function findAll(){
 	$this->load->database();
-	$res = $this->db->get('horario');
+	$this->db->select('*');
+	$this->db->from('horario h');
+	$this->db->join('usuario u','u.usu_id = h.hor_usu_id','inner');
+	$this->db->join('asignatura a','a.asig_id = h.hor_asig_id','inner');
+	$res = $this->db->get();
 	if ($res->num_rows() > 0) {
 		foreach ($res->result() as $value) {
 			$result[] = $this->create($value);
@@ -94,7 +98,7 @@ function insert(){
 	}
 
 	public function create($row){
-		$prod =  new Contacto_model();
+		$prod =  new Horario_model();
 		$prod->setColumns($row);
 		return $prod;
     }

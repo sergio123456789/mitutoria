@@ -8,6 +8,7 @@ class Asesor_Controller extends CI_Controller {
 		parent::__construct();
 		$this->layout->setLayout('/MasterPage',false);
 		$this->load->model('Usuario_model','usuario',true);
+		$this->load->model('Horario_model','horario',true);
 	}
 	public function index()
 	{
@@ -24,6 +25,12 @@ class Asesor_Controller extends CI_Controller {
 
 	public function verProfesor(){
 		$this->layout->view('/Asesor/VerProfesores.php');
+	}
+
+	public function verTutorias(){
+		$horarios = $this->horario->findAll();
+		$datos["horarios"] = $horarios;
+		$this->layout->view('/Asesor/verTutoriasAsesor.php',$datos,false);
 	}
 
 }

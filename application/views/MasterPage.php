@@ -8,6 +8,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="<?= base_url()?>resources/assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="<?= base_url()?>resources/assets/js/material.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?= base_url()?>resources/js/jquery-ui/jquery-ui.css">
+  <link href="<?= base_url()?>resources/css/vendor.css" rel="stylesheet"/>
+  <link href="<?= base_url()?>resources/css/flat-admin.css" rel="stylesheet"/>
+  <link href="<?= base_url()?>resources/css/red.css" rel="stylesheet"/>
+  
+  <link rel="stylesheet" type="text/css" href="<?=base_url()?>resources/js/datatables.min.css"/>
+  <script type="text/javascript" src="<?=base_url()?>resources/js/datatables.min.js"></script>
 
 	
 	<title>Asesor pedagógico</title>
