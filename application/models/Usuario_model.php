@@ -98,7 +98,7 @@ function insertperusu(){
 		}
 		return $result;
 	}
-function findByIdpermisos($id){
+	function findByIdpermisos($id){
 		$result=array();
 		$bit = null;
 		$this->db->where('per_usu_id',$id);

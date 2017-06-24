@@ -55,49 +55,49 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/verAlumnos">
                             <i class="material-icons">face</i>
                             <p>Ver Alumnos</p>
                         </a>
                     </li>
                     <li>
-                        <a href="buscarprofesores.html">
+                        <a href="<?=site_url()?>/Asesor_Controller/verProfesor">
                         <i class="fa fa-user-secret"></i>
                             <p>Ver Profesores</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/verTutorias">
                             <i class="material-icons">library_books</i>
                             <p>Tutorías</p>
                         </a>
                     </li>
                      <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/Reforsamientos">
                             <i class="material-icons">assignment_turned_in</i>
                             <p>Reforzamientos</p>
                         </a>
                     </li>
                    <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/Ayudantia">
                             <i class="material-icons">book</i>
                             <p>Ayudantía</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/Notificaciones">
                             <i class="material-icons text-gray">notifications</i>
                             <p>Notificaciones</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/Importar">
                             <i class="material-icons">file_upload</i>
                             <p>Importar</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?=site_url()?>/Asesor_Controller/Exportar">
                             <i class="material-icons">file_download</i>
                             <p>Exportar</p>
                         </a>
