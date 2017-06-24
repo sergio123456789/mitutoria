@@ -7,10 +7,15 @@ class Asesor_Controller extends CI_Controller {
 	{
 		parent::__construct();
 		$this->layout->setLayout('/MasterPage',false);
+		$this->load->model('Usuario_model','usuario',true);
 	}
 	public function index()
 	{
 		$this->layout->view('/Asesor/index.php','datos',false);
+	}
+
+	public function verAlumnos(){
+		$this->layout->view('/Asesor/VerAlumno.php','datos',false);
 	}
 
 }
