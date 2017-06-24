@@ -70,12 +70,13 @@ function insertperusu(){
     public function save(){
 		try {
 			$this->load->database();
-		if($this->columns['usu_id'] == 0){
-			$this->db->insert("usuario",$this->columns);
-			$this->columns['usu_id'] = $this->db->insert_id();
+		if($this->_columns['usu_id'] == 0){
+			$this->db->insert("usuario",$this->_columns);
+			$this->_columns['usu_id'] = $this->db->insert_id();
+			return $this->db->insert_id();
 		}else{
-			$this->db->where('usu_id',$this->columns['usu_id']);
-			$this->db->update('usuario',$this->columns);
+			$this->db->where('usu_id',$this->_columns['usu_id']);
+			$this->db->update('usuario',$this->_columns);
 		}
 			
 		} catch (Exception $e) {

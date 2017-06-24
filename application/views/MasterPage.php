@@ -105,7 +105,7 @@
                     <?php } ?>
                     <?php if ((in_array(2, $user['permisos'])) ) { ?>
                         <li>
-                        <a href="#">
+                        <a href="">
                             <i class="material-icons">home</i>
                             <p>Inicio</p>
                         </a>
@@ -200,27 +200,21 @@
                     <?php } ?>
                     <?php if ((in_array(4, $user['permisos'])) ) { ?>
                          <li class="active">
-                        <a href="#">
+                        <a href="<?=site_url('Profesor_Controller/Index')?>">
                             <i class="material-icons">home</i>
                             <p>Inicio</p>
                         </a>
                     </li>
                     <li>
-                        <a href="user.html">
+                        <a href="<?=site_url('Profesor_Controller/perfil')?>">
                             <i class="material-icons">person</i>
                             <p>Mi Perfil</p>
                         </a>
                     </li>
                     <li>
-                        <a href="table.html">
+                        <a href="<?=site_url('Profesor_Controller/horario')?>">
                             <i class="material-icons">date_range</i>                            
                         <p>Mi Horario</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="typography.html">
-                            <i class="material-icons">library_books</i>
-                            <p>Mis Ramos</p>
                         </a>
                     </li>
                    <li>
@@ -229,13 +223,7 @@
                             <i class="material-icons">assignment</i>
                             <p>Solicitar reforzamientos</p></a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons text-gray">notifications</i>
-                            <p>Notificaciones</p>
-
-                        </a>
-                    </li>
+                   
                     <?php } ?>
                     <?php if ((in_array(5, $user['permisos'])) ) { ?>
                         <li>
@@ -290,7 +278,56 @@
                     </div>
                 </div>
             </nav>
-           
+            <div class="modal" id="Modalreforzamientos">
+                                <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                          <h3 class="modal-title">Pedir Reforzamiento</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="card-content">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Dia</label>
+                                                    <select>
+                                                        <option value="Lunes">Lunes</option>
+                                                        <option value="Martes">Martes</option>
+                                                        <option value="Miercoles">Miercoles</option>
+                                                        <option value="Jueves">Jueves</option>
+                                                        <option value="Viernes">Viernes</option>
+                                                        <option value="Sabado">Sabado</option>
+                                                        
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Asignatura</label>
+                                                    <input type="email" class="form-control" >
+                                                </div>
+                                            </div>
+                                              <div class="col-md-3">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Fecha</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </form></div>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-default " data-dismiss="modal">Cancelar</button>  
+                                          <button type="button" class="btn btn-primary">Solicitar</button>
+                                        </div>
+                                                
+
+                                      </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                  </div><!-- /.modal -->
 
         <!--aqui termina la wea -->
         <div class="row">
