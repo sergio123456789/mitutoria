@@ -9,7 +9,6 @@ class Login_Controller extends CI_Controller {
 	}
 	public function index()
 	{
-			  
 		   	$this->load->view('login');
 	}
 	
@@ -32,13 +31,9 @@ class Login_Controller extends CI_Controller {
 		   {
 		   		$user = $this->session->userdata('logged_in');
 	   			if(count($user['permisos']) > 0){
-					if (in_array(6, $user['permisos'])) {
+					if (in_array(5, $user['permisos'])) {
 	   					redirect('Alumno_Controller/index','refresh');
-   					}elseif (in_array(5, $user['permisos'])) {
-	   					redirect('Alumno_Controller/index','refresh');
-	   				}elseif (in_array(4, $user['permisos'])) {
-	   					redirect('Tutor_Controller/index','refresh');
-	   				}elseif (in_array(3, $user['permisos'])) {
+   					}elseif (in_array(3, $user['permisos'])) {
 	   					redirect('Tutor_Controller/index','refresh');
 	   				}elseif (in_array(2, $user['permisos'])) {	
 	   					redirect('Asistente_Controller/index','refresh');	   			

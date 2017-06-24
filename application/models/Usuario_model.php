@@ -147,12 +147,12 @@ function findByIdpermisos($id){
 
 	public function getArea()
 	{
-		$result = $this->db->query("select are_id from area inner join usuario on usuario.usu_are_id = area.are_id where 
+		$result = $this->db->query("select ar_id from area inner join usuario on usuario.usu_are_id = area.ar_id where 
 			usuario.usu_id = ".$this->_columns['usu_id']);
 		$area = 0;
 		if($result->num_rows() > 0){
 			foreach ($result->result()  as $key => $value) {
-				$area = $value->are_id;
+				$area = $value->ar_id;
 			}
 		}
 		return $area;

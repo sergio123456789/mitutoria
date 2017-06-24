@@ -3,9 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Alumno_Controller extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->layout->setLayout('/MasterPage',false);
+	}
 	public function index()
 	{
-		$this->load->view('Alumnos/index.php','datos',false);
+		$this->layout->view('/Alumnos/index.php','datos',false);
 	}
 
 }
