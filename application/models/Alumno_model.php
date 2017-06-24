@@ -31,7 +31,7 @@ private $columns = array(
 'alu_plan' => '',
 'alu_fechamatricula' => '',
 'alu_comunacolegio' => '',
-'alu_rolbd' => '',
+'alu_rolrbd' => '',
 'alu_colegio' => '',
 'alu_tipo_colegio' => '',
 'alu_otro_colegio' => '',
@@ -123,7 +123,7 @@ public function get($key){
 	}
 
 	public function create($row){
-		$prod =  new Contacto_model();
+		$prod =  new Alumno_model();
 		$prod->setColumns($row);
 		return $prod;
     }

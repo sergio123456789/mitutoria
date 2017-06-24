@@ -73,6 +73,7 @@ function insertperusu(){
 		if($this->_columns['usu_id'] == 0){
 			$this->db->insert("usuario",$this->_columns);
 			$this->_columns['usu_id'] = $this->db->insert_id();
+			return $this->db->insert_id();
 		}else{
 			$this->db->where('usu_id',$this->_columns['usu_id']);
 			$this->db->update('usuario',$this->_columns);
